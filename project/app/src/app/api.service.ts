@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { environment } from '../environments/environment';
-import { ITheme } from './shared/interfaces/theme';
-import { IPost } from './shared/interfaces/post';
+import { IOffer } from './shared/interfaces/offer';
+
 
 const apiURL = environment.apiURL;
 
@@ -13,16 +13,12 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  loadThemes() {
-    return this.httpClient.get<ITheme[]>(`${apiURL}/themes`);
+  loadOffers() {
+    return this.httpClient.get<IOffer[]>(`${apiURL}/offers`);
   }
 
-  loadTheme(id: number) {
-    return this.httpClient.get<ITheme>(`${apiURL}/themes/${id}`);
-  }
-
-  loadPosts(limit?: number) {
-    return this.httpClient.get<IPost[]>(`${apiURL}/posts${limit ? `?limit=${limit}` : ``}`);
+  loadOffer(id: number) {
+    return this.httpClient.get<IOffer>(`${apiURL}/offers/${id}`);
   }
 
 }

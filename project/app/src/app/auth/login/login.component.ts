@@ -30,7 +30,7 @@ export class LoginComponent {
     const { email, password } = form.value;
     this.authService.login(email!, password!)
       .subscribe(user => {
-        this.router.navigate(['/theme/recent']);
+        this.router.navigate(['/offer/recent']);
       });
 
     const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';

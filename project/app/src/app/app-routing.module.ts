@@ -23,8 +23,8 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'theme',
-    loadChildren: () => import('./theme/theme.module').then(m => m.ThemeModule)
+    path: 'offer',
+    loadChildren: () => import('./offer/offer.module').then(m => m.OfferModule)
   },
   {
     path: '**',

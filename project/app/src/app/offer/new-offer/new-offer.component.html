@@ -1,0 +1,75 @@
+<section id="create">
+  <div class="form">
+    <h2>Create Offer</h2>
+  <form #form="ngForm" (ngSubmit)="newOfferHandler(form)" class="create-form">
+   
+     
+      <input type="text" name="title" #nameInput="ngModel" ngModel required [minlength]="3" id="job-title" placeholder="Title">
+
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          Offer name is required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          Offer name must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+     
+      <input type="text" name="imageUrl" #nameInput="ngModel" ngModel required [minlength]="10" id="job-logo" placeholder="ImageURL">
+
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          ImageURL is required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          ImageURL must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+    
+      <input type="text" name="category" #nameInput="ngModel" ngModel required [minlength]="2" id="job-category" placeholder="Category">
+
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          Categoryis required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          Category must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+     
+      <textarea type="text" #textInput="ngModel" ngModel required [minlength]="10" name="description" id="job-description" placeholder="Description"></textarea>
+      <ng-container *ngIf="textInput.touched">
+        <p class="error" *ngIf="textInput.errors?.['required']">
+          Description for the offer is required.
+        </p>
+        <p class="error" *ngIf="textInput.errors?.['minlength']">
+          Description field must be at least {{textInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+      <textarea type="text" #textInput="ngModel" ngModel required [minlength]="10" name="requirements" id="job-requirements" placeholder="Requirements"></textarea>
+      <ng-container *ngIf="textInput.touched">
+        <p class="error" *ngIf="textInput.errors?.['required']">
+          Requirements for the offer is required.
+        </p>
+        <p class="error" *ngIf="textInput.errors?.['minlength']">
+          Requirements field must be at least {{textInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+      <input type="text" name="salary" #nameInput="ngModel" ngModel required [minlength]="1" id="job-salary" placeholder="Salary">
+
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          Salary is required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          Salary must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+   
+     
+    <button class="public" [disabled]="form.invalid">Create</button>
+  
+
+  </form>
+</div>
+</section>

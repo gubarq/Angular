@@ -1,12 +1,8 @@
 export interface IUser {
-  themes: string[];
-  posts: string[];
+  offers: string[];
   _id: string;
-  tel: string;
   email: string;
-  username: string;
   password: string;
-  created_at: string;
-  updatedAt: string;
+  created_on: string;
   __v: number;
 }

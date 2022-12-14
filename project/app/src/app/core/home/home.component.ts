@@ -8,11 +8,4 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class HomeComponent {
 
-
-  get isLoggedIn() {
-    return this.authServie.isLoggedIn;
-  }
-
-  constructor(private authServie: AuthService) { }
-
 }

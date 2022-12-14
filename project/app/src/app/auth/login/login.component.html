@@ -1,20 +1,16 @@
-<form #form="ngForm" class="login" (ngSubmit)="loginHandler(form)">
-  <fieldset>
-    <h2>Login Form</h2>
+<section id="login">
+  <div class="form"> 
+    <h2>Login</h2>
+<form #form="ngForm" class="login-form" (ngSubmit)="loginHandler(form)">
+  
 
-    <p class="field field-icon">
-      <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+    
+      
       <input #emailInput="ngModel" class="input-error" ngModel required type="text" name="email" id="email"
-        placeholder="john.doe">
-    </p>
+        placeholder="abv@gmail.com">
+  
 
-    <!-- <select ngModel="456" name="test" multiple>
-      <option value="123">123</option>
-      <option value="456">456</option>
-    </select>
-
-    {{form.value | json}} -->
-    <!-- <input #files type="file" ngModel required> -->
+    
 
     <ng-container *ngIf="emailInput.touched">
       <p class="error" *ngIf="emailInput.errors?.['required']">
@@ -26,7 +22,6 @@
     </ng-container>
 
     <p class="field field-icon">
-      <label for="password"><span><i class="fas fa-lock"></i></span></label>
       <input type="password" ngModel #passwordInput="ngModel" name="password" id="password" placeholder="******"
         required [minlength]="5">
     </p>
@@ -41,10 +36,12 @@
 
     <button [disabled]="form.invalid">Login</button>
 
-    <p class="text-center">
+    <p class="message">
       Have an account?
       <a href="#">Register</a>
     </p>
 
-  </fieldset>
+  
 </form>
+</div> 
+</section>
