@@ -24,7 +24,7 @@ const offerSchema = new mongoose.Schema({
     },
     requirements: {
         type: String,
-        required: true
+        required: false
     },
     salary: {
         type: String,

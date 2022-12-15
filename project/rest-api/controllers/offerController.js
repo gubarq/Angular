@@ -21,11 +21,11 @@ function getOffer(req, res, next) {
 }
 
 function createOffer(req, res, next) {
-    const { title, postText } = req.body;
+    const { title, category, imageUrl, description, requirements, salary } = req.body;
     const { _id: _ownerId } = req.user;
 
-    offerModel.create({ title, _ownerId, subscribers: [_ownerId] })
-        .then(([_, updatedOffer]) => res.status(200).json(updatedOffer))
+    offerModel.create({ title, _ownerId, category, imageUrl, description, requirements, salary })
+        .then(offer => {res.status(200).json(offer)})
         .catch(next);
 }
 

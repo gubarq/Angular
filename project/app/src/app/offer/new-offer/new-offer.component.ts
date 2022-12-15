@@ -17,11 +17,11 @@ export class NewOfferComponent {
 
   newOfferHandler(form: NgForm): void {
     if (form.invalid) { return; }
-    const { title, imageUrl, category, description, requirments, salary } = form.value;
+    const { title, imageUrl, category, description, requirements, salary } = form.value;
 
-    this.offerService.createOffer(title, imageUrl, category, description, requirments, salary)
+    this.offerService.createOffer(title, imageUrl, category, description, requirements, salary)
       .subscribe(() => {
-        this.router.navigate(['/offer/recent'])
+        this.router.navigate(['/'])
       })
   }
 }

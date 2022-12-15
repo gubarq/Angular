@@ -27,7 +27,6 @@
       </ng-container>
     
       <input type="text" name="category" #nameInput="ngModel" ngModel required [minlength]="2" id="job-category" placeholder="Category">
-
       <ng-container *ngIf="nameInput.touched">
         <p class="error" *ngIf="nameInput.errors?.['required']">
           Categoryis required.
@@ -46,6 +45,7 @@
           Description field must be at least {{textInput.errors?.['minlength']['requiredLength']}} characters long.
         </p>
       </ng-container>
+      
       <textarea type="text" #textInput="ngModel" ngModel required [minlength]="10" name="requirements" id="job-requirements" placeholder="Requirements"></textarea>
       <ng-container *ngIf="textInput.touched">
         <p class="error" *ngIf="textInput.errors?.['required']">
@@ -55,8 +55,9 @@
           Requirements field must be at least {{textInput.errors?.['minlength']['requiredLength']}} characters long.
         </p>
       </ng-container>
+      
+      
       <input type="text" name="salary" #nameInput="ngModel" ngModel required [minlength]="1" id="job-salary" placeholder="Salary">
-
       <ng-container *ngIf="nameInput.touched">
         <p class="error" *ngIf="nameInput.errors?.['required']">
           Salary is required.

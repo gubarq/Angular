@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 // import { catchError, map, of, throwError } from 'rxjs';
 import { appEmailDomains } from 'src/app/shared/constants';
@@ -13,27 +13,22 @@ import { AuthService } from '../auth.service';
 })
 export class RegisterComponent {
 
-  form = this.fb.group({
-    username: ['', [Validators.required, Validators.minLength(5)]],
-    email: ['', [Validators.required, appEmailValidator(appEmailDomains)]],
-    ext: [''],
-    tel: [''],
-    pass: this.fb.group({
-      password: ['', [Validators.required, Validators.minLength(5)]],
-      rePassword: []
-    }, {
-      validators: [sameValueGroupValidator('password', 'rePassword')]
-    })
-  });
+  passwordCheck : boolean = false;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
-  registerHandler() {
-    if (this.form.invalid) { return; }
-    const { email, pass: { password, rePassword } = {}, tel } = this.form.value;
-    this.authService.register(email!, password!, rePassword!)
+  registerHandler(form: NgForm) {
+    if (form.invalid) { return; }
+    const { email, password, rePassword} = form.value;
+    if(password == rePassword) 
+    {
+      this.passwordCheck = true;
+      
+      this.authService.register(email!, password!, rePassword!)
       .subscribe(user => {
-        this.router.navigate(['/offer/recent']);
+        this.router.navigate(['/']);
       });
+     
+    }
   }
 }
