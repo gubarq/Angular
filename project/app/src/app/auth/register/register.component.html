@@ -38,7 +38,7 @@
         <p class="error" *ngIf="repasswordInput.errors?.['minlength']">
         Repeated Password must be at least {{repasswordInput.errors?.['minlength']['requiredLength']}} characters long.
         </p>
-        <p class="error" *ngIf="passwordCheck">
+        <p class="error" *ngIf="passwordCheck == false">
           Repeat password does not match!
           </p>
       </ng-container>
