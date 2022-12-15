@@ -2,38 +2,6 @@
   <a id="logo" href="/"
           ><img id="logo-img" src="../../../assets/images/logo.jpg" alt=""
         /></a>
-      <!-- <ul *ngIf="!isLoggedIn; else loggedInTemplate">
-        <li>
-          <a routerLink="/auth/login">Login</a>
-        </li>
-        <li>
-          <a routerLink="/auth/register">Register</a>
-        </li>
-      </ul> -->
-
-
-
-      <!-- <ng-template [ngIf]="!isLoggedIn" [ngIfElse]="loggedInTemplate">
-        <ul>
-          <li>
-            <a routerLink="/auth/login">Login</a>
-          </li>
-          <li>
-            <a routerLink="/auth/register">Register</a>
-          </li>
-        </ul>
-      </ng-template>
-
-      <ng-template #loggedInTemplate>
-        <ul *ngIf="isLoggedIn">
-          <li>
-            <a routerLink="/auth/profile">{{user?.fistName}}'s profile</a>
-          </li>
-          <li>
-            <a routerLink="/auth/logout">Logout</a>
-          </li>
-        </ul>
-      </ng-template> -->
       <nav>  
       <ng-template #loggedOutTemplate>
         <div class="guest">
@@ -45,6 +13,7 @@
       <ng-template #loggedInTemplate>
         
         <div class="user">
+            <a routerLink="/">Dashboard</a>
             <a routerLink="/offer/new">New Offer</a>
             <a routerLink="/auth/logout">Logout</a>
         </div>
