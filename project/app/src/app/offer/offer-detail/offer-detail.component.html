@@ -1,33 +1,21 @@
 <section id="details">
   <div id="details-wrapper">
-    <img id="details-img" src="../../../assets/images/example2.png" alt="example1" />
-    <p id="details-title">Senior Frontend Software Engineer</p>
+    <img id="details-img" src={{offer.imageUrl}} alt="example1" />
+    <p id="details-title">{{offer.title}}</p>
     <p id="details-category">
-      Category: <span id="categories">IT, Developer, WEB</span>
+      Category: <span id="categories">{{offer.category}}</span>
     </p>
     <p id="details-salary">
-      Salary: <span id="salary-number">7000</span>
+      Salary: <span id="salary-number">{{offer.salary}}</span>
     </p>
     <div id="info-wrapper">
       <div id="details-description">
         <h4>Description</h4>
-        <span
-          >We are looking for programmers with a keen eye for design for
-          the position of front end developer. Front end developers are
-          responsible for ensuring the alignment of web design and user
-          experience requirements, optimizing web pages for maximum
-          efficiency, and maintaining brand consistency across all web
-          pages, among other duties.</span
-        >
+        <span>{{offer.description}}</span>
       </div>
       <div id="details-requirements">
         <h4>Requirements</h4>
-        <span
-          >Degree in computer science or related field. Understanding of
-          key design principles. Proficiency in HTML, CSS, JavaScript.
-          Experience with responsive and adaptive design. Good
-          problem-solving skills. Excellent verbal communication skills.
-          Good interpersonal skills.</span
+        <span>{{offer.requirements}}</span
         >
       </div>
     </div>
