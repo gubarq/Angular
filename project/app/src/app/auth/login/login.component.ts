@@ -14,18 +14,15 @@ export class LoginComponent {
   appEmailDomains = appEmailDomains;
 
   @ViewChild(
-    // 'form',
     NgForm,
     { static: true }
   ) form!: ElementRef<HTMLInputElement>;
-  // @ViewChild('files', { static: true }) files!: ElementRef<HTMLInputElement>;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private authService: AuthService) {
 
   }
 
   loginHandler(form: NgForm): void {
-    // console.log(this.files.nativeElement.files);
     if (form.invalid) { return; }
     const { email, password } = form.value;
     this.authService.login(email!, password!)

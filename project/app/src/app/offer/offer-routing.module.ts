@@ -4,10 +4,7 @@ import { OfferResolver } from "./resolvers/offer.resolver";
 import { OfferDetailComponent } from "./offer-detail/offer-detail.component";
 
 const routes: Routes = [
-  // {
-  //   path: 'recent',
-  //   component: MainComponent
-  // },
+ 
   {
     path: 'new',
     component: NewOfferComponent

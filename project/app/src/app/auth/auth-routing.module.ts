@@ -35,28 +35,5 @@ const routes: Routes = [
   },
 ];
 
-// const sameRoutes: Routes = [
-//   {
-//     path: 'auth',
-//     children: [
-//       {
-//         path: 'login',
-//         component: LoginComponent
-//       },
-//       {
-//         path: 'register',
-//         component: RegisterComponent
-//       },
-//       {
-//         path: 'logout',
-//         component: LogoutComponent
-//       },
-//       {
-//         path: 'profile',
-//         component: ProfileComponent
-//       }
-//     ]
-//   }
-// ];
 
 export const AuthRoutingModule = RouterModule.forChild(routes);
