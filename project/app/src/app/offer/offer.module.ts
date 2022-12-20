@@ -7,13 +7,15 @@ import { NewOfferComponent } from './new-offer/new-offer.component';
 import { OfferDetailComponent } from './offer-detail/offer-detail.component';
 
 import { FormsModule } from '@angular/forms';
+import { DeleteOfferComponent } from './delete-offer/delete-offer.component';
 
 
 @NgModule({
   declarations: [
     OfferListComponent,
     NewOfferComponent,
-    OfferDetailComponent
+    OfferDetailComponent,
+    DeleteOfferComponent
   ],
   imports: [
     CommonModule,

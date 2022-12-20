@@ -8,6 +8,6 @@ const { offerController} = require('../controllers');
 router.get('/', offerController.getOffers);
 router.post('/', auth(), offerController.createOffer);
 router.get('/:offerId', offerController.getOffer);
-
+router.delete('/:offerId',auth(), offerController.deleteOffer);
 
 module.exports = router

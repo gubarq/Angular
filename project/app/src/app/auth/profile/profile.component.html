@@ -1,0 +1,10 @@
+<h2 *ngIf="!isEmpty">Your Offers</h2>
+<h2 *ngIf="isEmpty">You don't have offers yet!</h2>
+<div *ngFor="let offer of offerList; let i = index" class="offer">
+        <img src={{offer.imageUrl}} alt="example1">
+        <p>
+            <strong>Title: </strong><span class="title">{{offer.title}}</span>
+          </p>
+          <p><strong>Salary:</strong><span class="salary">{{offer.salary}}</span></p>
+          <a class="details-btn" routerLink="/offer/detail/{{offer._id}}">Details</a>
+</div>

@@ -29,10 +29,26 @@ function createOffer(req, res, next) {
         .catch(next);
 }
 
+function deleteOffer(req, res, next) {
+    const { offerId } = req.params;
+    
+    offerModel.findOneAndDelete({ _id: offerId })
+    .then(deletedOffer => {
+        if (deletedOffer) {
+            res.status(200).json(deletedOffer);
+        }
+        else {
+            res.status(401).json({ message: `Not allowed!` });
+        }
+    })
+    .catch(next);
+}
+
 
 
 module.exports = {
     getOffers,
     createOffer,
-    getOffer
+    getOffer,
+    deleteOffer
 }

@@ -1,5 +1,6 @@
 <section id="details">
   <div id="details-wrapper">
+    
     <img id="details-img" src={{offer.imageUrl}} alt="example1" />
     <p id="details-title">{{offer.title}}</p>
     <p id="details-category">
@@ -19,5 +20,11 @@
         >
       </div>
     </div>
+  
+    <ng-template #owner>
+      <div id="action-buttons">
+        <button id="delete-btn" routerLink="/delete/{{offer?._id}}">Delete</button>
+      </div>
+    </ng-template>
   </div>
 </section>

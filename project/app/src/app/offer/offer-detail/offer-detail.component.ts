@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IOffer } from 'src/app/shared/interfaces';
+import { IOffer, IUser } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-offer-detail',
@@ -10,6 +10,8 @@ import { IOffer } from 'src/app/shared/interfaces';
 export class OfferDetailComponent implements OnInit {
   
   offer : IOffer;
+  user: IUser | null = null;
+  isOwner !: boolean;
   
   constructor(private activatedRoute: ActivatedRoute) {
     this.offer = this.activatedRoute.snapshot.data?.['offer'];
@@ -18,7 +20,9 @@ export class OfferDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.user?._id.toString() == this.offer?._ownerId.toString() ? this.isOwner=true : this.isOwner=false
   }
+  
 
 }
+

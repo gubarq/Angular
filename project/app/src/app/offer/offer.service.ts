@@ -24,4 +24,8 @@ export class OfferService {
   createOffer(title: string, imageUrl: string, category: string, description: string, requirments: string, salary: string) {
     return this.http.post<IOffer>('/api/offers/', {title, imageUrl, category, description, requirments, salary });
   }
+
+  deleteOffer(id: string|undefined){
+    return this.http.delete<any>(`/movies/${id}`)
+  }
 }
