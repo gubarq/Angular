@@ -21,10 +21,10 @@
       </div>
     </div>
   
-    <ng-template #owner>
-      <div id="action-buttons">
-        <button id="delete-btn" routerLink="/delete/{{offer?._id}}">Delete</button>
+    
+      <div id="action-buttons" *ngIf="isOwner">
+        <a id="delete-btn" routerLink="../../delete/{{offer._id}}">Delete</a>
       </div>
-    </ng-template>
+    
   </div>
 </section>

@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
       next:(value) =>{
         this.offerList = value
         this.userId = this.authService.user?._id.toString()
-        this.offerList = this.offerList.filter(x => x._ownerId.toString() == this.userId)
+        this.offerList = this.offerList.filter(x => x._ownerId._id.toString() == this.userId)
       },
       error: (err) => {console.error(err)}
     })}

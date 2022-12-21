@@ -21,11 +21,11 @@ export class OfferService {
     return this.http.get<IOffer>('/api/offers/' + id);
   }
 
-  createOffer(title: string, imageUrl: string, category: string, description: string, requirments: string, salary: string) {
-    return this.http.post<IOffer>('/api/offers/', {title, imageUrl, category, description, requirments, salary });
+  createOffer(title: string, imageUrl: string, category: string, description: string, requirements: string, salary: string) {
+    return this.http.post<IOffer>('/api/offers/', {title, imageUrl, category, description, requirements, salary });
   }
 
   deleteOffer(id: string|undefined){
-    return this.http.delete<any>(`/movies/${id}`)
+    return this.http.delete<any>(`/api/offers/${id}`)
   }
 }
