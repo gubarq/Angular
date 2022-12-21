@@ -1,0 +1,41 @@
+
+
+[{
+    
+    "_ownerId": "5fa64a072183ce1728ff3719",
+    "title": "Senior Frontend Software Engineer",
+    "imageUrl": "../../../assets/images/example2.png",
+    "category": "IT, Developer, WEB",
+    "description":
+      "We are looking for programmers with a keen eye for design for the position of front end developer. Front end developers are responsible for ensuring the alignment of web design and user experience requirements, optimizing web pages for maximum efficiency, and maintaining brand consistency across all web pages, among other duties.",
+    "requirements":
+      "Degree in computer science or related field. Understanding of key design principles. Proficiency in HTML, CSS, JavaScript. Experience with responsive and adaptive design. Good problem-solving skills. Excellent verbal communication skills. Good interpersonal skills.",
+    "salary": "7000",
+    "_createdOn": 1617194210928
+  },
+    {
+    
+    "_ownerId": "5fa64a072183ce1728ff3719",
+    "title": "Sales Manager",
+    "imageUrl": "../../../assets/images/example1.png",
+    "category": "Sales, Administration, Analyze",
+    "description":
+      "A sales manager is someone who is responsible for leading and guiding a team of sales people in an organization. They set sales goals & quotas, build a sales plan, analyze data, assign sales training and sales territories, mentor the members of his/her sales team and are involved in the hiring and firing process.",
+    "requirements":
+      "Managing organizational sales by developing a business plan that covers sales, revenue, and expense controls. Meeting planned sales goals. Setting individual sales targets with the sales team. Tracking sales goals and reporting results as necessary. Overseeing the activities and performance of the sales team.",
+    "salary": "1900",
+    "_createdOn": 1617194295474
+  },
+   {
+    
+    "_ownerId": "5fa64a072183ce1728ff3719",
+    "title": "Invoice Administrator",
+    "imageUrl": "../../../assets/images/example3.png",
+    "category": "Finance, Administration, Data Capture",
+    "description":
+      "The manager will oversee quality assurance, quality control, and customer service regarding the invoicing process; ensure adherence to proper invoicing procedures; and interpret and clarify invoicing policies. We are looking for individuals who have a passion for making a difference in the lives of people around the world.",
+    "requirements":
+      "Experience with SQL-based accounting software and demonstrated ability to learn and operate new systems in a short period. Experience with accounts payable, general ledger, and client invoicing. Experience with accounting software; Solomon IV experience preferred. Ability to solve technical, managerial, or operational problems and evaluate options based on relevant information, resources, well-rounded experience, and knowledge.",
+    "salary": "1700",
+    "_createdOn": 1617194295480
+  }]
