@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [AuthActivate],
+    //canActivate: [AuthActivate],
     data: {
       title: 'Login',
       loginRequired: false
@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-    canActivate: [AuthActivate],
+    //canActivate: [AuthActivate],
     data: {
       title: 'Register',
       loginRequired: false

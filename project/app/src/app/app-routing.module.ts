@@ -3,12 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './core/error/error.component';
 import { HomeComponent } from './core/home/home.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { OfferListComponent } from './offer/offer-list/offer-list.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent
+    data:{title:"Home"},
+    component: OfferListComponent
   },
   {
     path: 'not-found',

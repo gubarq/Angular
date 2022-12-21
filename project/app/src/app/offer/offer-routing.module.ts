@@ -7,10 +7,12 @@ const routes: Routes = [
  
   {
     path: 'new',
+    data:{title:"New offer"},
     component: NewOfferComponent
   },
   {
     path: 'detail/:id',
+    data:{title:"Details"},
     resolve: {
       offer: OfferResolver
     },
